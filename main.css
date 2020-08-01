@@ -74,35 +74,14 @@
     transition: ease-in .3s;
 }
 
-.button:hover {
-    background-color: #333;
-    color: #eee;
-    border: none;
-    box-shadow: 1px 1px 15px #eee, -1px -1px 15px #eee;
-}
-
 #clear {
     background-color: orangered;
     color: #eee;
 }
 
-#clear:hover {
-    background-color: #eee;
-    color: orangered;
-    border: none;
-    box-shadow: 1px 1px 15px orangered, -1px -1px 15px orangered;
-}
-
 .operator {
     background-color: lightseagreen;
     color: #eee;
-}
-
-.operator:hover {
-    background-color: #eee !important;
-    color: lightseagreen !important;
-    border: none !important;
-    box-shadow: 1px 1px 15px lightseagreen, -1px -1px 15px lightseagreen !important;
 }
 
 #equal {
@@ -113,9 +92,29 @@
     height: 100%;
 }
 
-#equal:hover {
-    background-color: #eee;
-    color: mediumseagreen;
-    border: none;
-    box-shadow: 1px 1px 15px mediumseagreen, -1px -1px 15px mediumseagreen;
+@media not all and (pointer: coarse) {
+    .button:hover {
+        background-color: #333;
+        color: #eee;
+        border: none;
+        box-shadow: 1px 1px 15px #eee, -1px -1px 15px #eee;
+    }
+    #clear:hover {
+        background-color: #eee;
+        color: orangered;
+        border: none;
+        box-shadow: 1px 1px 15px orangered, -1px -1px 15px orangered;
+    }
+    .operator:hover {
+        background-color: #eee !important;
+        color: lightseagreen !important;
+        border: none !important;
+        box-shadow: 1px 1px 15px lightseagreen, -1px -1px 15px lightseagreen !important;
+    }
+    #equal:hover {
+        background-color: #eee;
+        color: mediumseagreen;
+        border: none;
+        box-shadow: 1px 1px 15px mediumseagreen, -1px -1px 15px mediumseagreen;
+    }
 }
