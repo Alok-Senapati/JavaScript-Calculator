@@ -8,6 +8,17 @@
 .container-fluid {
     background: linear-gradient(90deg, rgb(3, 11, 117), rgb(143, 12, 110), rgb(173, 6, 6));
     height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#overlay {
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    overflow: hidden;
 }
 
 .calc-body {
@@ -42,7 +53,7 @@
 }
 
 #buttons-container {
-    width: 93%;
+    width: 91%;
     height: 350px;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -70,26 +81,12 @@
     box-shadow: 1px 1px 15px #eee, -1px -1px 15px #eee;
 }
 
-.button:active {
-    background-color: #333;
-    color: #eee;
-    border: none;
-    box-shadow: 1px 1px 15px #eee, -1px -1px 15px #eee;
-}
-
 #clear {
     background-color: orangered;
     color: #eee;
 }
 
 #clear:hover {
-    background-color: #eee;
-    color: orangered;
-    border: none;
-    box-shadow: 1px 1px 15px orangered, -1px -1px 15px orangered;
-}
-
-#clear:active {
     background-color: #eee;
     color: orangered;
     border: none;
@@ -108,13 +105,6 @@
     box-shadow: 1px 1px 15px lightseagreen, -1px -1px 15px lightseagreen !important;
 }
 
-.operator:active {
-    background-color: #eee !important;
-    color: lightseagreen !important;
-    border: none !important;
-    box-shadow: 1px 1px 15px lightseagreen, -1px -1px 15px lightseagreen !important;
-}
-
 #equal {
     grid-row: 4/6;
     grid-column: 4/5;
@@ -124,13 +114,6 @@
 }
 
 #equal:hover {
-    background-color: #eee;
-    color: mediumseagreen;
-    border: none;
-    box-shadow: 1px 1px 15px mediumseagreen, -1px -1px 15px mediumseagreen;
-}
-
-#equal:active {
     background-color: #eee;
     color: mediumseagreen;
     border: none;
