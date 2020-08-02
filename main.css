@@ -47,9 +47,13 @@
 #display {
     font-size: 2rem;
     padding: 0px 10px;
-    width: 100%;
+    width: 98%;
+    max-width: 100%;
     font-family: 'Roboto Slab', serif;
     text-align: right;
+    background: transparent;
+    border: none;
+    border-radius: 10px;
 }
 
 #buttons-container {
@@ -117,4 +121,30 @@
         border: none;
         box-shadow: 1px 1px 15px mediumseagreen, -1px -1px 15px mediumseagreen;
     }
+}
+
+.button:active {
+    background-color: #eee;
+}
+
+#clear:active {
+    background-color: orangered;
+    color: #eee;
+}
+
+.operator:active {
+    background-color: lightseagreen !important;
+    color: #eee !important;
+}
+
+#equal:active {
+    background-color: mediumseagreen;
+    color: #eee;
+}
+
+.button:focus,
+#clear:focus,
+.operator:focus,
+#equal:focus {
+    outline: 0;
 }
