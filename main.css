@@ -45,7 +45,7 @@
 }
 
 #display {
-    font-size: 2rem;
+    font-size: 2vw;
     padding: 0px 10px;
     width: 98%;
     max-width: 100%;
@@ -147,4 +147,34 @@
 .operator:focus,
 #equal:focus {
     outline: 0;
+}
+
+@media (max-width: 1200px) {
+    #display {
+        font-size: 2.1vw;
+    }
+}
+
+@media (max-width: 1000px) {
+    #display {
+        font-size: 2.9vw;
+    }
+}
+
+@media (max-width: 760px) {
+    #display {
+        font-size: 4vw;
+    }
+}
+
+@media (max-width: 575px) {
+    #display {
+        font-size: 6.5vw;
+    }
+}
+
+@media (max-width: 442px) {
+    #display {
+        font-size: 8vw;
+    }
 }
