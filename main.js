@@ -28,7 +28,7 @@ function clearAll() {
 }
 
 function backSpace() {
-    if (displayString.length == 1 || invalidFlag) {
+    if (displayString.length == 1 || invalidFlag || displayString == "") {
         clearAll();
     } else if (displayString.length > 0) {
         displayString = displayString.slice(0, -1);
@@ -73,10 +73,14 @@ function equate() {
             displayString = displayString.replace(multiplySign, "*");
             displayString = String(eval(displayString));
             if (displayString.length > 10) {
-                displayString = "";
-                console.log(true);
-                setDisplay('Result exceeds limit.');
-                invalidFlag = true;
+                if (displayString.indexOf('.') != -1) {
+                    displayString = String(Number(displayString).toFixed(3));
+                    setDisplay(displayString);
+                } else {
+                    displayString = "";
+                    setDisplay('Result exceeds limit.');
+                    invalidFlag = true;
+                }
             } else {
                 setDisplay(displayString);
             }
